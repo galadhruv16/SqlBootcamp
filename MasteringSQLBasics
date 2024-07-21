@@ -1,0 +1,32 @@
+SHOW DATABASES
+CREATE DATABASE LearningSQL
+USE LearningSQL
+SELECT DATABASE()
+CREATE TABLE employee(
+	EID INT AUTO_INCREMENT,
+    FirstName varchar(50) NOT NULL,
+    LastName varchar(50) NOT NULL,
+    Age INT NOT NULL,
+    Salary INT NOT NULL,
+    Location varchar(50) NOT NULL,
+    PRIMARY KEY(EID)
+)
+DESC employee
+SHOW TABLES
+DROP TABLE employee
+INSERT INTO employee(FirstName,LastName,Age,Salary,Location) VALUES ("Dhruv","Gala",20,200000,"Thane");
+INSERT INTO employee(FirstName,LastName,Age,Salary,Location) VALUES ("Kayaan","Billimoria",20,100000,"Lois Vadi");
+INSERT INTO employee(FirstName,LastName,Age,Salary,Location) VALUES ("Shamlaan","Sayyad",19,150000,"Masjid");
+INSERT INTO employee(FirstName,LastName,Age,Salary,Location) VALUES ("Kushagra","Tiwari",21,300000,"Dadar");
+INSERT INTO employee(FirstName,LastName,Age,Salary,Location) VALUES ("Rishab","Tiwari",17,20000,"Nitin company");
+INSERT INTO employee(FirstName,LastName,Age,Salary,Location) VALUES ("Harshil","Shetty",19,250000,"Govandi");
+
+SELECT * FROM EMPLOYEE
+
+SELECT * FROM employee WHERE Age>20;
+
+-- Update name of an employee 
+UPDATE employee SET FirstName = "Tiwari"
+WHERE EID = 5
+-- Delete an employee 
+DELETE FROM employee WHERE EID = 6
